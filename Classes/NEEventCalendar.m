@@ -23,7 +23,6 @@ NSString *const kFidUsedCalendar = @"kFidUsedCalendar";
     
     if ([eventStore respondsToSelector:@selector(requestAccessToEntityType:completion:)]) {
         [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
-            
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (error) {
                     if (failure) {
