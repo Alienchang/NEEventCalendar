@@ -25,7 +25,6 @@ NSString *const kFidUsedCalendar = @"kFidUsedCalendar";
         [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                __strong typeof(weakSelf) strongSelf = weakSelf;
                 if (error) {
                     if (failure) {
                         failure();

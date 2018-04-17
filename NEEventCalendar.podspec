@@ -17,13 +17,13 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-textField和textView的封装.
+  s.description      = <<-DESC 
+日历添加事件封装,基本日历操作
                        DESC
 
   s.homepage         = 'https://github.com/Alienchang/NEEventCalendar.git'
   s.license          = 'MIT'
-  s.author           = { 'liuchang' => '1217493217@qq.com' }
+  s.author           = { 'Alienchang' => '1217493217@qq.com' }
   s.source           = { :git => 'https://github.com/Alienchang/NEEventCalendar.git', :tag => s.version.to_s }
 
   s.module_name = 'NEEventCalendar'
