@@ -124,11 +124,11 @@ NSString *const kFidUsedCalendar = @"kFidUsedCalendar";
         //根据谓词条件筛选已插入日历的事件
         NSArray *eventsArray = [eventStore eventsMatchingPredicate:predicate];
         if (eventsArray.count) {
-            for (EKEvent *item in eventsArray) {
+            for (EKEvent *tempItem in eventsArray) {
                 //根据事件的某个唯一性，如果已插入日历就不再插入
-                if([item.title isEqualToString:item.title] &&
-                   [item.startDate isEqualToDate:item.startDate] &&
-                   [item.endDate isEqualToDate:item.endDate]) {
+                if([tempItem.title isEqualToString:item.title] &&
+                   [tempItem.startDate isEqualToDate:item.startDate] &&
+                   [tempItem.endDate isEqualToDate:item.endDate]) {
                     return YES;
                 }
             }
